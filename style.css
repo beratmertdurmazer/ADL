@@ -981,16 +981,38 @@ a.contact-val:hover {
   .top-status-bar {
     display: none;
   }
+  
+  /* Fix 1: Breadcrumb note hidden on mobile to prevent overlap */
+  .breadcrumb-right-note {
+    display: none;
+  }
+  .breadcrumb-container {
+    justify-content: flex-start;
+  }
+
+  /* Fix 2: Hero and card layout in normal vertical flow */
   .hero-section {
-    padding: 2rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: auto;
+    padding: 1.8rem 0 2.8rem 0;
   }
   .floating-office-card {
     max-width: 100%;
+    margin: 0 auto;
   }
+
+  /* Fix 2: Switcher widget placed cleanly under the card with proper spacing */
   .bg-switcher-widget {
-    bottom: 1rem;
-    right: 1rem;
-    padding: 0.35rem 0.6rem;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 1.5rem auto 0 auto;
+    align-self: center;
+    z-index: 20;
+    padding: 0.4rem 0.7rem;
   }
   .switcher-label {
     display: none;
@@ -1004,10 +1026,10 @@ a.contact-val:hover {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 1.2rem;
+    padding: 0 1.1rem;
   }
   .card-body {
-    padding: 1.5rem 1.3rem;
+    padding: 1.5rem 1.2rem;
   }
   .office-title {
     font-size: 2.2rem;
@@ -1015,4 +1037,19 @@ a.contact-val:hover {
   .cs-actions {
     grid-template-columns: 1fr;
   }
+  .breadcrumb-list {
+    font-size: 0.78rem;
+    gap: 0.35rem;
+  }
+  .bg-switcher-widget {
+    max-width: 100%;
+    gap: 0.4rem;
+    padding: 0.35rem 0.5rem;
+  }
+  .switcher-btn {
+    font-size: 0.68rem;
+    padding: 0.3rem 0.5rem;
+    gap: 0.25rem;
+  }
 }
+
