@@ -26,7 +26,7 @@
     <div class="container top-bar-content">
       <div class="status-indicator">
         <span class="pulse-dot"></span>
-        <span class="status-text">Web Sitemiz Hazırlık Aşamasındadır &bull; Yeni Platformumuz Çok Yakında Yayında</span>
+        <span class="status-text" data-i18n="topBarStatus">Web Sitemiz Hazırlık Aşamasındadır &bull; Yeni Platformumuz Çok Yakında Yayında</span>
       </div>
       <div class="top-contact-quick">
         <a href="mailto:info@adllawconsultancy.com" class="quick-link">
@@ -49,41 +49,39 @@
       <nav class="desktop-nav" aria-label="Ana Menü">
         <ul class="nav-menu">
           <li class="nav-item">
-            <button class="nav-link disabled-nav" data-section="People">
-              People <span class="lock-indicator"><i class="fa-solid fa-lock"></i></span>
+            <button class="nav-link disabled-nav" data-section="team">
+              <span data-i18n="menuTeam">Ekibimiz</span> <span class="lock-indicator"><i class="fa-solid fa-lock"></i></span>
             </button>
           </li>
           <li class="nav-item">
-            <button class="nav-link disabled-nav" data-section="Services">
-              Services <span class="lock-indicator"><i class="fa-solid fa-lock"></i></span>
+            <button class="nav-link disabled-nav" data-section="practices">
+              <span data-i18n="menuPractices">Çalışma Alanlarımız</span> <span class="lock-indicator"><i class="fa-solid fa-lock"></i></span>
             </button>
           </li>
           <li class="nav-item">
-            <button class="nav-link disabled-nav" data-section="Insights">
-              Insights <span class="lock-indicator"><i class="fa-solid fa-lock"></i></span>
+            <button class="nav-link disabled-nav" data-section="careers">
+              <span data-i18n="menuCareers">Kariyer</span> <span class="lock-indicator"><i class="fa-solid fa-lock"></i></span>
             </button>
           </li>
           <li class="nav-item">
-            <button class="nav-link disabled-nav" data-section="Newsroom">
-              Newsroom <span class="lock-indicator"><i class="fa-solid fa-lock"></i></span>
-            </button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link disabled-nav" data-section="About Us">
-              About Us <span class="lock-indicator"><i class="fa-solid fa-lock"></i></span>
-            </button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link disabled-nav" data-section="Careers">
-              Careers <span class="lock-indicator"><i class="fa-solid fa-lock"></i></span>
+            <button class="nav-link disabled-nav" data-section="contact">
+              <span data-i18n="menuContact">İletişim</span> <span class="lock-indicator"><i class="fa-solid fa-lock"></i></span>
             </button>
           </li>
         </ul>
       </nav>
 
-      <!-- HEADER ACTIONS (Search & Mobile Toggle) -->
+      <!-- HEADER ACTIONS (Language Switcher, Search & Mobile Toggle) -->
       <div class="header-actions">
-        <button class="search-btn disabled-nav" data-section="Search" title="Arama (Yakında)" aria-label="Arama">
+        
+        <!-- LANGUAGE SWITCHER (TR / EN) -->
+        <div class="lang-switcher" aria-label="Dil Seçimi">
+          <button class="lang-btn active" data-lang="tr" id="langBtnTr" title="Türkçe">TR</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="en" id="langBtnEn" title="English">EN</button>
+        </div>
+
+        <button class="search-btn disabled-nav" data-section="search" title="Arama" aria-label="Arama">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
 
@@ -103,37 +101,67 @@
       <img src="assets/images/logo-header.jpg" alt="ADL Law & Consultancy" class="mobile-logo">
       <button class="mobile-close-btn" id="mobileCloseBtn">&times;</button>
     </div>
+    
+    <!-- Mobile Lang Toggle -->
+    <div class="mobile-lang-wrap">
+      <span class="mobile-lang-label"><i class="fa-solid fa-globe"></i> Dil / Language:</span>
+      <div class="mobile-lang-buttons">
+        <button class="mobile-lang-btn active" data-lang="tr">Türkçe (TR)</button>
+        <button class="mobile-lang-btn" data-lang="en">English (EN)</button>
+      </div>
+    </div>
+
     <ul class="mobile-menu-list">
-      <li><button class="mobile-nav-link disabled-nav" data-section="People">People</button></li>
-      <li><button class="mobile-nav-link disabled-nav" data-section="Services">Services</button></li>
-      <li><button class="mobile-nav-link disabled-nav" data-section="Insights">Insights</button></li>
-      <li><button class="mobile-nav-link disabled-nav" data-section="Newsroom">Newsroom</button></li>
-      <li><button class="mobile-nav-link disabled-nav" data-section="About Us">About Us</button></li>
-      <li><button class="mobile-nav-link disabled-nav" data-section="Careers">Careers</button></li>
+      <li>
+        <button class="mobile-nav-link disabled-nav" data-section="team">
+          <span data-i18n="menuTeam">Ekibimiz</span>
+          <i class="fa-solid fa-lock mobile-lock"></i>
+        </button>
+      </li>
+      <li>
+        <button class="mobile-nav-link disabled-nav" data-section="practices">
+          <span data-i18n="menuPractices">Çalışma Alanlarımız</span>
+          <i class="fa-solid fa-lock mobile-lock"></i>
+        </button>
+      </li>
+      <li>
+        <button class="mobile-nav-link disabled-nav" data-section="careers">
+          <span data-i18n="menuCareers">Kariyer</span>
+          <i class="fa-solid fa-lock mobile-lock"></i>
+        </button>
+      </li>
+      <li>
+        <button class="mobile-nav-link disabled-nav" data-section="contact">
+          <span data-i18n="menuContact">İletişim</span>
+          <i class="fa-solid fa-lock mobile-lock"></i>
+        </button>
+      </li>
     </ul>
+
     <div class="mobile-drawer-footer">
-      <div class="mobile-badge">
+      <div class="mobile-badge" data-i18n="mobileNote">
         <i class="fa-solid fa-circle-info"></i> Menüler yapım aşamasındadır
       </div>
       <p><i class="fa-regular fa-envelope"></i> info@adllawconsultancy.com</p>
+      <p><i class="fa-solid fa-phone"></i> +90 539 571 53 71</p>
     </div>
   </div>
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
-  <!-- BREADCRUMB BAR (As in White & Case: Home / Offices / Istanbul) -->
+  <!-- BREADCRUMB BAR (White & Case Style) -->
   <div class="breadcrumb-bar">
     <div class="container breadcrumb-container">
       <nav aria-label="Breadcrumb">
         <ol class="breadcrumb-list">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="index.html" data-i18n="crumbHome">Ana Sayfa</a></li>
           <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
-          <li class="breadcrumb-item"><span class="disabled-crumb">Offices</span></li>
+          <li class="breadcrumb-item"><span class="disabled-crumb" data-i18n="crumbOffices">Ofisler</span></li>
           <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
-          <li class="breadcrumb-item active" aria-current="page">Istanbul</li>
+          <li class="breadcrumb-item active" aria-current="page" data-i18n="crumbCity">İstanbul</li>
         </ol>
       </nav>
       <div class="breadcrumb-right-note">
-        <span class="badge-status">Coming Soon / Hazırlık Aşamasında</span>
+        <span class="badge-status" data-i18n="crumbStatus">Hazırlık Aşamasında</span>
       </div>
     </div>
   </div>
@@ -141,10 +169,10 @@
   <!-- HERO SECTION WITH ISTANBUL BACKGROUND & FLOATING INFO CARD -->
   <main class="hero-section" id="heroSection">
     
-    <!-- Background layers (Switchable via widget) -->
-    <div class="hero-bg-layer active" id="bgLayer1" style="background-image: url('assets/images/istanbul-night.jpg');"></div>
+    <!-- Background layers (Switchable & Auto-rotating every 10s. Default: Gündüz) -->
+    <div class="hero-bg-layer active" id="bgLayer1" style="background-image: url('assets/images/istanbul-panorama.jpg');"></div>
     <div class="hero-bg-layer" id="bgLayer2" style="background-image: url('assets/images/istanbul-twilight.jpg');"></div>
-    <div class="hero-bg-layer" id="bgLayer3" style="background-image: url('assets/images/istanbul-panorama.jpg');"></div>
+    <div class="hero-bg-layer" id="bgLayer3" style="background-image: url('assets/images/istanbul-night.jpg');"></div>
     
     <!-- Dark Vignette / Contrast Overlay -->
     <div class="hero-overlay"></div>
@@ -161,17 +189,17 @@
         <div class="card-body">
           <!-- Small Category Tag -->
           <div class="card-category">
-            <span class="cat-pill">Office Location</span>
-            <span class="status-live-pill"><span class="dot"></span> Hazırlık Aşaması</span>
+            <span class="cat-pill" data-i18n="cardCategory">Ofis Bilgisi</span>
+            <span class="status-live-pill"><span class="dot"></span> <span data-i18n="cardLiveStatus">Hazırlık Aşaması</span></span>
           </div>
 
           <!-- Main Location Heading -->
-          <h1 class="office-title" id="office-title">Istanbul</h1>
+          <h1 class="office-title" id="office-title" data-i18n="officeTitle">İstanbul</h1>
 
           <!-- Firm Full Legal Title -->
           <div class="office-entity">
             <h2 class="entity-name">ADL Law & Consultancy</h2>
-            <p class="entity-sub">Avukatlık & Hukuki Danışmanlık Hizmetleri</p>
+            <p class="entity-sub" data-i18n="entitySub">Avukatlık & Hukuki Danışmanlık Hizmetleri</p>
           </div>
 
           <!-- Elegant Divider with Diamond -->
@@ -183,21 +211,20 @@
 
           <!-- Address Block -->
           <address class="office-address">
-            <p class="address-line street">Büyükdere Caddesi, No: 175</p>
-            <p class="address-line district">Ferko Signature Kat: 9</p>
-            <p class="address-line city">34394 Şişli, İstanbul</p>
-            <p class="address-line country">Türkiye</p>
+            <p class="address-line street">Acıbadem, Akasya Koru Kule</p>
+            <p class="address-line district">B3C 117</p>
+            <p class="address-line city">Üsküdar / İstanbul</p>
+            <p class="address-line country" data-i18n="country">Türkiye</p>
           </address>
 
-          <!-- Contact Details (T / F / E) -->
+          <!-- Contact Details (T / E) -->
           <div class="office-contact-list">
             <div class="contact-row">
               <span class="contact-label">T</span>
-              <a href="tel:+902123542000" class="contact-val">+90 212 354 2000</a>
-            </div>
-            <div class="contact-row">
-              <span class="contact-label">F</span>
-              <span class="contact-val">+90 212 354 2001</span>
+              <a href="tel:+905395715371" class="contact-val" id="firmPhoneLink">+90 539 571 53 71</a>
+              <button class="copy-btn" id="copyPhoneBtn" title="Numarayı Kopyala" aria-label="Numarayı Kopyala">
+                <i class="fa-regular fa-copy"></i>
+              </button>
             </div>
             <div class="contact-row highlight-email">
               <span class="contact-label">E</span>
@@ -212,17 +239,17 @@
           <div class="coming-soon-banner">
             <div class="cs-badge">
               <span class="cs-dot"></span>
-              <span class="cs-title">WEBSITE COMING SOON</span>
+              <span class="cs-title" data-i18n="csTitle">WEB SİTEMİZ ÇOK YAKINDA YAYINDA</span>
             </div>
-            <p class="cs-desc">
+            <p class="cs-desc" data-i18n="csDesc">
               ADL Law & Consultancy kurumsal web sitemiz ve dijital hizmet altyapımız hazırlanmaktadır. Çok yakında tüm detaylarıyla yayında olacağız.
             </p>
             <div class="cs-actions">
-              <a href="mailto:info@adllawconsultancy.com?subject=Danismanlik%20Talebi%20-%20ADL%20Law" class="btn btn-primary">
-                <i class="fa-solid fa-paper-plane"></i> Bize Ulaşın / Contact
+              <a href="mailto:info@adllawconsultancy.com?subject=Danismanlik%20Talebi%20-%20ADL%20Law" class="btn btn-primary" id="btnContactEmail">
+                <i class="fa-solid fa-paper-plane"></i> <span data-i18n="btnEmail">Bize Ulaşın / E-Posta</span>
               </a>
-              <a href="tel:+902123542000" class="btn btn-secondary">
-                <i class="fa-solid fa-phone"></i> Hemen Arayın
+              <a href="tel:+905395715371" class="btn btn-secondary" id="btnCallPhone">
+                <i class="fa-solid fa-phone"></i> <span data-i18n="btnCall">Hemen Arayın</span>
               </a>
             </div>
           </div>
@@ -231,23 +258,28 @@
 
       </section>
 
-    </div>
+      <!-- BACKGROUND IMAGE PICKER WIDGET (Default: Gündüz, Auto-rotates every 10s) -->
+      <aside class="bg-switcher-widget" aria-label="Arka Plan Görseli Seçici">
+        <span class="switcher-label"><i class="fa-regular fa-image"></i> <span data-i18n="switcherLabel">Görsel:</span></span>
+        <div class="switcher-buttons">
+          <button class="switcher-btn active" data-bg="1" title="Gündüz Boğaziçi">
+            <i class="fa-solid fa-sun"></i>
+            <span class="btn-label-long" data-i18n="bgDay">Gündüz Panorama</span>
+            <span class="btn-label-short" data-i18n="bgDayShort">Gündüz</span>
+          </button>
+          <button class="switcher-btn" data-bg="2" title="İkindi Şehir">
+            <i class="fa-solid fa-city"></i>
+            <span data-i18n="bgSunset">İkindi</span>
+          </button>
+          <button class="switcher-btn" data-bg="3" title="Gece Boğaz Manzarası">
+            <i class="fa-solid fa-moon"></i>
+            <span class="btn-label-long" data-i18n="bgNight">Gece Boğaz</span>
+            <span class="btn-label-short" data-i18n="bgNightShort">Gece</span>
+          </button>
+        </div>
+      </aside>
 
-    <!-- BACKGROUND IMAGE PICKER WIDGET (Bottom Right) -->
-    <aside class="bg-switcher-widget" aria-label="Arka Plan Görseli Seçici">
-      <span class="switcher-label"><i class="fa-regular fa-image"></i> Görsel:</span>
-      <div class="switcher-buttons">
-        <button class="switcher-btn active" data-bg="1" title="Gece Boğaz Manzarası">
-          <i class="fa-solid fa-moon"></i> <span>Gece Boğaz</span>
-        </button>
-        <button class="switcher-btn" data-bg="2" title="İkindi Şehir">
-          <i class="fa-solid fa-city"></i> <span>İkindi</span>
-        </button>
-        <button class="switcher-btn" data-bg="3" title="Gündüz Boğaziçi">
-          <i class="fa-solid fa-sun"></i> <span>Gündüz Panorama</span>
-        </button>
-      </div>
-    </aside>
+    </div>
 
   </main>
 
@@ -255,13 +287,13 @@
   <footer class="site-footer">
     <div class="container footer-container">
       <div class="footer-left">
-        <span class="copyright">&copy; 2026 <strong>ADL Law & Consultancy</strong>. Tüm Hakları Saklıdır.</span>
+        <span class="copyright">&copy; 2026 <strong>ADL Law & Consultancy</strong>. <span data-i18n="footerRights">Tüm Hakları Saklıdır.</span></span>
       </div>
       <div class="footer-center">
-        <span class="footer-quote">Excellence in Legal Practice & Corporate Advisory</span>
+        <span class="footer-quote" data-i18n="footerQuote">Hukuki Danışmanlık ve Avukatlıkta Güven ve Mükemmellik</span>
       </div>
       <div class="footer-right">
-        <span class="footer-location"><i class="fa-solid fa-location-dot"></i> Istanbul, Turkey</span>
+        <span class="footer-location"><i class="fa-solid fa-location-dot"></i> <span data-i18n="footerLocation">İstanbul, Türkiye</span></span>
       </div>
     </div>
   </footer>

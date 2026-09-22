@@ -4,25 +4,32 @@ Prestijli hukuk ve danışmanlık bürosu **ADL Law & Consultancy** için özel 
 
 ---
 
-## 🏛️ Tasarım Özellikleri
+## 🏛️ Tasarım ve Fonksiyonel Özellikler
 
 - **Kurumsal Renk Entegrasyonu (`#360c17`):** Header ve marka alanı, ADL logosunun zemin rengiyle (`#360c17`) birebir eşleştirilmiştir. Böylece logo hiçbir kenarlık veya sırıtma olmadan kusursuz bir şekilde arayüze entegre olur.
-- **White & Case Referans Mimarisi:**
-  - Üst menü navigasyonu (*People*, *Services*, *Insights*, *Newsroom*, *About Us*, *Careers* ve Arama butonu).
-  - Menü linkleri tıklandığında sayfadan ayrılmayacak şekilde tasarlanmış olup, kullanıcıyı bilgilendiren zarif bir **"Hazırlık Aşaması / Coming Soon"** toast bildirimi gösterir.
-  - White & Case tarzı **Home / Offices / Istanbul** breadcrumb alt barı.
+- **İki Dilli Yapı (Türkçe & İngilizce):**
+  - Sayfa varsayılan olarak **Türkçe** açılır.
+  - Header'da ve mobil menüde yer alan **TR | EN** dil seçici ile sayfa yenilenmeden tüm metinler, menüler, butonlar ve bildirimler anında Türkçe/İngilizce arasında değiştirilebilir.
+- **Kurumsal Menü Yapısı:**
+  - **Ekibimiz** *(Our Team)*
+  - **Çalışma Alanlarımız** *(Practice Areas)*
+  - **Kariyer** *(Careers)*
+  - **İletişim** *(Contact)*
+  - Arama butonu *(Search)*
+  - Menü linkleri tıklandığında sayfadan ayrılmayacak şekilde tasarlanmış olup, kullanıcıyı bilgilendiren zarif ve çok dilli bir **"Hazırlık Aşaması / Coming Soon"** toast bildirimi gösterir.
 - **Yüzen (Floating) Ofis Bilgi Kartı:**
-  - "Istanbul" ana başlığı ve ADL Law & Consultancy kurumsal unvanı.
-  - Ofis adresi (Büyükdere Cad. Ferko Signature, Şişli / İstanbul).
-  - Telefon (`+90 212 354 2000`) ve E-posta (`info@adllawconsultancy.com`).
-  - Tek tıkla e-posta kopyalama butonu.
-  - Vurgulanmış "Website Coming Soon / Web Sitemiz Çok Yakında Yayında" bildirim alanı ve doğrudan iletişim butonları.
-- **Telif Sorunsuz İstanbul Arka Planı & Görsel Değiştirici Widget:**
-  - Sağ alttaki zarif widget üzerinden 3 farklı görünüm arasında anlık geçiş yapılabilir:
-    1. Gece Boğaz Köprüsü panoraması
-    2. İkindi / Gün Batımı İstanbul silüeti
-    3. Gündüz Ortaköy & Boğaziçi panoraması
-- **Mobil & Tablet Uyumu (Responsive):** Tüm ekran boyutlarında modern hamburger menü çekmecesi ve uyarlanabilir kart yerleşimi.
+  - "İstanbul" ana başlığı ve ADL Law & Consultancy kurumsal unvanı.
+  - **Resmi Adres:** Acıbadem, Akasya Koru Kule, B3C 117, Üsküdar / İstanbul.
+  - **Telefon:** `+90 539 571 53 71` (Tek tıkla arama ve kopyalama desteği).
+  - **E-Posta:** `info@adllawconsultancy.com` (Tek tıkla e-posta gönderme ve kopyalama).
+  - Vurgulanmış "Website Coming Soon / Web Sitemiz Çok Yakında Yayında" bildirim alanı.
+- **Otomatik 10 Saniyelik Arka Plan Döngüsü:**
+  - Sayfa ilk açıldığında otomatik olarak **Gündüz fotoğrafı** açılır.
+  - Her **10 saniyede bir** sırasıyla Gündüz &rarr; İkindi &rarr; Gece Boğaz fotoğrafları arasında yumuşak fade geçişiyle otomatik döngü sağlanır.
+  - Kullanıcı alt widget'tan manuel seçim yaptığında da anında o görsele geçer.
+- **Mobil & Tablet Uyumu (Responsive):**
+  - Mobilde görsel değiştirici widget 100% ortalanmış ve butonların üzerine binmeyecek şekilde düzenlenmiştir.
+  - Modern hamburger menü çekmecesi.
 
 ---
 
@@ -30,9 +37,9 @@ Prestijli hukuk ve danışmanlık bürosu **ADL Law & Consultancy** için özel 
 
 ```
 ADL/
-├── index.html                   # Ana sayfa HTML yapısı
+├── index.html                   # Ana sayfa HTML yapısı (Çok dilli altyapı)
 ├── style.css                    # Kurumsal CSS stil dosyası (Vanilla CSS)
-├── script.js                    # Etkileşimler, toast bildirimleri ve görsel değiştirici
+├── script.js                    # Çok dillilik motoru, 10s otomatik slayt ve etkileşimler
 ├── .gitignore                   # Git yoksayma kuralları
 ├── README.md                    # Proje dokümantasyonu
 └── assets/
@@ -40,32 +47,17 @@ ADL/
         ├── logo.jpg             # Orijinal kurumsal logo (#360c17 zemin)
         ├── logo-header.jpg      # Header için optimize edilmiş logo
         ├── logo-transparent.png # Şeffaf arka planlı PNG versiyonu
-        ├── istanbul-night.jpg   # Gece Boğaz Köprüsü görseli
-        ├── istanbul-twilight.jpg# İkindi şehir manzarası
-        └── istanbul-panorama.jpg# Yüksek çözünürlüklü Boğaziçi panoraması
+        ├── istanbul-panorama.jpg# Gündüz Ortaköy & Boğaziçi panoraması (Varsayılan)
+        ├── istanbul-twilight.jpg# İkindi / Gün batımı şehir manzarası
+        └── istanbul-night.jpg   # Gece Boğaz Köprüsü görseli
 ```
 
 ---
 
-## 🚀 Yerel Olarak Çalıştırma
+## 🌐 Canlı Yayın & GitHub
 
-Projeyi yerel bilgisayarınızda çalıştırmak için:
-
-1. `index.html` dosyasını doğrudan herhangi bir tarayıcıda çift tıklayarak açabilirsiniz.
-2. Veya bir yerel web sunucusu ile:
-```bash
-python3 -m http.server 8080
-```
-Tarayıcınızda `http://localhost:8080` adresine gidin.
-
----
-
-## 🌐 GitHub Pages ile Canlıya Alma
-
-Bu repoyu GitHub Pages ile anında ücretsiz yayına almak için:
-1. GitHub reponuzda **Settings** > **Pages** sekmesine gidin.
-2. **Branch** kısmından `main` (veya `master`) dalını ve `/ (root)` dizinini seçip **Save** butonuna tıklayın.
-3. Birkaç saniye içinde siteniz `https://<kullanici-adiniz>.github.io/ADL/` adresinde canlıya geçecektir.
+- **GitHub Deposu:** [github.com/beratmertdurmazer/ADL](https://github.com/beratmertdurmazer/ADL)
+- **Canlı Yayın (GitHub Pages):** [beratmertdurmazer.github.io/ADL](https://beratmertdurmazer.github.io/ADL/)
 
 ---
 
