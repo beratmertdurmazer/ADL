@@ -20,7 +20,7 @@ Prestijli hukuk ve danışmanlık bürosu **ADL Law & Consultancy** için özel 
 - **Telif Sorunsuz İstanbul Arka Planı & Görsel Değiştirici Widget:**
   - Sağ alttaki zarif widget üzerinden 3 farklı görünüm arasında anlık geçiş yapılabilir:
     1. Gece Boğaz Köprüsü panoraması
-    2. Alacakaranlık / Blue Hour İstanbul silüeti
+    2. İkindi / Gün Batımı İstanbul silüeti
     3. Gündüz Ortaköy & Boğaziçi panoraması
 - **Mobil & Tablet Uyumu (Responsive):** Tüm ekran boyutlarında modern hamburger menü çekmecesi ve uyarlanabilir kart yerleşimi.
 
@@ -41,7 +41,7 @@ ADL/
         ├── logo-header.jpg      # Header için optimize edilmiş logo
         ├── logo-transparent.png # Şeffaf arka planlı PNG versiyonu
         ├── istanbul-night.jpg   # Gece Boğaz Köprüsü görseli
-        ├── istanbul-twilight.jpg# Alacakaranlık şehir manzarası
+        ├── istanbul-twilight.jpg# İkindi şehir manzarası
         └── istanbul-panorama.jpg# Yüksek çözünürlüklü Boğaziçi panoraması
 ```
 
